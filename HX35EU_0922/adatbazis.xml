@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<adatbazis>
+    <dolgozo>
+        <kod>35</kod>
+        <nev>Szabo Peter</nev>
+        <fizetes></fizetes>
+        <body>10000</body>
+    </dolgozo>
+</adatbazis>

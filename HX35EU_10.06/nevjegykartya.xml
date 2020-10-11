@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<nevjegykartya id="0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    <nev>
+        Szabo Peter
+    </nev>
+    <ceg>
+        <cim>
+            <iranyitoszam>
+                3524
+            </iranyitoszam>
+            <varos>
+                Miskolc
+            </varos>
+            <utca>
+                Klapka Gyorgy
+            </utca>
+            <hazszam> 8 </hazszam>
+
+        </cim>
+        <nev>
+            Ceg
+        </nev>
+        <telefonszam korzet="46"> 111111 </telefonszam>
+        <weblap>
+            weblap.net
+        </weblap>
+    </ceg>
+    <beosztas>
+        Fonok
+    </beosztas>
+    <telefonszam korzet="46"> 2222222</telefonszam>
+    <email>
+        email@email.hu
+    </email>
+</nevjegykartya>

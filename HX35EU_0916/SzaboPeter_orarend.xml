@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<orarend>
+    <ora id="1" tipus="eloadas">
+        <targy>mestersegesintelligencia</targy>
+        <idopont>
+            <nap>hetfo</nap>
+            <tol>12</tol>
+            <ig>15</ig>
+        </idopont>
+        <helyszin>XXX-as eloado</helyszin>
+        <oktato>dr. Dudas Laszlo</oktato>
+        <szak>progterv</szak>
+    </ora>
+    <ora id="2" tipus="eloadas">
+        <targy>webtechnologiak</targy>
+        <idopont>
+            <nap>hetfo</nap>
+            <tol>15</tol>
+            <ig>17</ig>
+        </idopont>
+        <helyszin>103 IT</helyszin>
+        <oktato>Agardi Anita</oktato>
+        <szak>progterv</szak>
+    </ora>
+    <ora id="3" tipus="gyakorlat">
+        <targy>webtechnologiak</targy>
+        <idopont>
+            <nap>hetfo</nap>
+            <tol>17</tol>
+            <ig>19</ig>
+        </idopont>
+        <helyszin>15 IT</helyszin>
+        <oktato>Satan Adam</oktato>
+        <szak>progterv</szak>
+    </ora>
+    <ora id="4" tipus="eloadas">
+        <targy>XML</targy>
+        <idopont>
+            <nap>kedd</nap>
+            <tol>12</tol>
+            <ig>14</ig>
+        </idopont>
+        <helyszin>XXXVII eloado</helyszin>
+        <oktato>Dr. Bednarik Laszlo</oktato>
+        <szak>progterv</szak>
+    </ora>
+    <ora id="5" tipus="gyakorlat">
+        <targy>XML</targy>
+        <idopont>
+            <nap>kedd</nap>
+            <tol>14</tol>
+            <ig>16</ig>
+        </idopont>
+        <helyszin>101 IT</helyszin>
+        <oktato>Dr. Bednarik Laszlo</oktato>
+        <szak>progterv</szak>
+    </ora>
+    <ora id="6" tipus="gyakorlat">
+        <targy>mestersegesintelligencia</targy>
+        <idopont>
+            <nap>kedd</nap>
+            <tol>17</tol>
+            <ig>18</ig>
+        </idopont>
+        <helyszin>15 IT</helyszin>
+        <oktato>Dr. Dudas Laszlo</oktato>
+        <szak>progterv</szak>
+    </ora>
+</orarend>

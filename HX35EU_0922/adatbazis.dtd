@@ -1,0 +1,25 @@
+<?xml encoding="UTF-8"?>
+
+<!ELEMENT adatbazis (dolgozo)>
+<!ATTLIST adatbazis
+  xmlns CDATA #FIXED ''>
+
+<!ELEMENT dolgozo (kod,nev,fizetes,body)>
+<!ATTLIST dolgozo
+  xmlns CDATA #FIXED ''>
+
+<!ELEMENT kod (#PCDATA)>
+<!ATTLIST kod
+  xmlns CDATA #FIXED ''>
+
+<!ELEMENT nev (#PCDATA)>
+<!ATTLIST nev
+  xmlns CDATA #FIXED ''>
+
+<!ELEMENT fizetes EMPTY>
+<!ATTLIST fizetes
+  xmlns CDATA #FIXED ''>
+
+<!ELEMENT body (#PCDATA)>
+<!ATTLIST body
+  xmlns CDATA #FIXED ''>

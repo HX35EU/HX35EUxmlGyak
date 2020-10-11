@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ember xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:noNamespaceSchemaLocation="file:/C:/Users/Gabriella/Desktop/egyetem/xml/MPJYO8_1006/ember.xsd">
+    <nev1>nev1</nev1>
+    <fizetes>999</fizetes>
+    <nev>nev2</nev>
+</ember>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<iskola>
+    <tanar id="1">
+        <nev>Dr. Bednarik László</nev>
+        <szak>Alkalmazott informatika</szak>
+    </tanar>
+    <tanar id="2">
+        <nev>Dr. Dudás László</nev>
+        <szak>Alkalmazott informatika</szak>
+    </tanar>
+    <tantargy id="3" idref="1">
+        <tnev>xml</tnev>
+        <osztaly>valami</osztaly>
+    </tantargy>
+    <tantargy id="4" idref="2">
+        <tnev>Mesint</tnev>
+        <osztaly>valami</osztaly>
+    </tantargy>
+</iskola>

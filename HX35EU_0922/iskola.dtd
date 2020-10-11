@@ -1,0 +1,33 @@
+<?xml encoding="UTF-8"?>
+
+<!ELEMENT iskola (tanar+,tantargy+)>
+<!ATTLIST iskola
+  xmlns CDATA #FIXED ''>
+
+<!ELEMENT tanar (nev,szak)>
+<!ATTLIST tanar
+  xmlns CDATA #FIXED ''
+  id CDATA #REQUIRED>
+
+<!ELEMENT tantargy (tnev,osztaly)>
+<!ATTLIST tantargy
+  xmlns CDATA #FIXED ''
+  id CDATA #REQUIRED
+  idref CDATA #REQUIRED>
+
+<!ELEMENT nev (#PCDATA)>
+<!ATTLIST nev
+  xmlns CDATA #FIXED ''>
+
+<!ELEMENT szak (#PCDATA)>
+<!ATTLIST szak
+  xmlns CDATA #FIXED ''>
+
+<!ELEMENT tnev (#PCDATA)>
+<!ATTLIST tnev
+  xmlns CDATA #FIXED ''>
+
+<!ELEMENT osztaly (#PCDATA)>
+<!ATTLIST osztaly
+  xmlns CDATA #FIXED ''>
+ 

@@ -1,0 +1,52 @@
+<?xml encoding="UTF-8"?>
+
+<!DOCTYPE mozi [
+
+        <!ELEMENT mozi (film)+>
+        <!ATTLIST mozi
+                xmlns CDATA #FIXED ''
+                xmlns:xsi CDATA #FIXED 'http://www.w3.org/2001/XMLSchema-instance'
+                xsi:noNamespaceSchemaLoaction NMTOKEN #REQUIRED>
+
+        <!ELEMENT film (rendezo+,szinesz,iro)>
+        <!ATTLIST film
+                xmlns CDATA #FIXED ''
+                id CDATA #REQUIRED
+                mufaj NMTOKEN #REQUIRED>
+
+        <!ELEMENT rendezo EMPTY>
+        <!ATTLIST rendezo
+                xmlns CDATA #FIXED ''
+                id CDATA #REQUIRED
+                nev NMTOKEN #REQUIRED>
+
+        <!ELEMENT szinesz EMPTY>
+        <!ATTLIST szinesz
+                xmlns CDATA #FIXED ''
+                id CDATA #REQUIRED
+                nev CDATA #REQUIRED>
+
+        <!ELEMENT iro EMPTY>
+        <!ATTLIST iro
+                xmlns CDATA #FIXED ''
+                id CDATA #REQUIRED>
+        ]>
+
+<mozi
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLoaction="mozi1.xsd">
+    <film id="1" mufaj="horror">
+        <rendezo id="1" nev="alex"/>
+        <rendezo id="2" nev="alex"/>
+        <szinesz id="1" nev="Madison Ivy"/>
+        <iro id="1"/>
+    </film>
+
+    <film id="2" mufaj="scifi">
+        <rendezo id="3" nev="alex"/>
+        <rendezo id="4" nev="alex"/>
+        <szinesz id="2" nev="Madison Ivy"/>
+        <iro id="2"/>
+    </film>
+
+</mozi>
