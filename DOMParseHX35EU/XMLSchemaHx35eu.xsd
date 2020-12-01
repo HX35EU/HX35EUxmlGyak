@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+    <xs:element name="Webshop">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="Vevő" maxOccurs="unbounded">
+                    <xs:complexType mixed="true">
+                        <xs:sequence>
+                            <xs:element name="TeljesNév" type="NevType"/>
+                            <xs:element name="Telefonszám" type="TelefonszamType"/>
+                            <xs:element name="Lakcím" type="LakcimType"/>
+                        </xs:sequence>
+                        <xs:attribute name="VEVO_ID" type="xs:integer" use="required"></xs:attribute>
+                    </xs:complexType>
+                </xs:element>
+                
+                <xs:element name="Kosár" maxOccurs="unbounded">
+                    <xs:complexType>
+                        <xs:attribute name="KOSAR_ID" type="xs:integer" use="required"></xs:attribute>
+                        <xs:attribute name="VEVO_ID" type="xs:integer" use="required"></xs:attribute>
+                    </xs:complexType>
+                </xs:element>
+                
+                <xs:element name="Termék" maxOccurs="unbounded">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="Készlet" type="xs:integer"/>
+                            <xs:element name="Megnevezés" type="xs:string"/>
+                            <xs:element name="Ár" type="xs:integer"/>
+                        </xs:sequence>
+                        <xs:attribute name="TERMEK_ID" type="xs:integer" use="required"></xs:attribute>
+                        <xs:attribute name="TIPUS_ID" type="xs:integer" use="required"></xs:attribute>
+                    </xs:complexType>
+                </xs:element>
+                
+                <xs:element name="Típus" maxOccurs="unbounded">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="Típusnév" type="xs:string"/>
+                        </xs:sequence>
+                        <xs:attribute name="TIPUS_ID" type="xs:integer" use="required"></xs:attribute>
+                    </xs:complexType>
+                </xs:element>
+                
+                <xs:element name="Benne" maxOccurs="unbounded">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="Darab" type="xs:integer"/>
+                            <xs:element name="Dátum" type="DatumType"/>
+                        </xs:sequence>
+                        <xs:attribute name="KOSAR_ID" type="xs:integer" use="required"></xs:attribute>
+                        <xs:attribute name="TERMEK_ID" type="xs:integer" use="required"></xs:attribute>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+        
+        <xs:key name="VEVO_KULCS">
+            <xs:selector xpath="./Vevő" />
+            <xs:field xpath="@VEVO_ID" />
+        </xs:key>
+        
+        <xs:key name="KOSAR_KULCS">
+            <xs:selector xpath="./Kosár" />
+            <xs:field xpath="@KOSAR_ID" />
+        </xs:key>
+        
+        <xs:key name="TERMEK_KULCS">
+            <xs:selector xpath="./Termék" />
+            <xs:field xpath="@TERMEK_ID" />
+        </xs:key>
+        
+        <xs:key name="TIPUS_KULCS">
+            <xs:selector xpath="./Típus"></xs:selector>
+            <xs:field xpath="@TIPUS_ID"></xs:field>
+        </xs:key>
+        
+        <xs:unique name="TERMEK_EGYEDI_KULCS">
+            <xs:selector xpath="./Termék"></xs:selector>
+            <xs:field xpath="@TERMEK_ID"></xs:field>
+        </xs:unique>
+        
+        <xs:unique name="EGY_VEVO_EGY_KOSAR">
+            <xs:selector xpath="./Kosár"></xs:selector>
+            <xs:field xpath="@VEVO_ID"></xs:field>
+        </xs:unique>
+        
+        <!-- Kosárhoz kötelező a vevő -->
+        <xs:keyref name="VEVO_KOSARA" refer="VEVO_KULCS">
+            <xs:selector xpath="./Kosár" />
+            <xs:field xpath="@VEVO_ID" />
+        </xs:keyref>
+        
+        <!-- Termékhez kötelező típus -->
+        <xs:keyref name="TERMEK_TIPUSA" refer="TIPUS_KULCS">
+            <xs:selector xpath="./Termék" />
+            <xs:field xpath="@TIPUS_ID" />
+        </xs:keyref>
+        
+        <!-- A kosár - termék kapcsolat megvalósítása -->
+        <xs:keyref name="BENNE_KOSAR" refer="KOSAR_KULCS">
+            <xs:selector xpath="./Benne" />
+            <xs:field xpath="@KOSAR_ID" />
+        </xs:keyref>
+        
+        <xs:keyref name="BENNE_TERMEK" refer="TERMEK_KULCS">
+            <xs:selector xpath="./Benne" />
+            <xs:field xpath="@TERMEK_ID" />
+        </xs:keyref>
+    </xs:element>
+    
+    <xs:simpleType name="IRSZType">
+        <xs:restriction base="xs:positiveInteger">
+            <xs:minInclusive value="1000"/>
+            <xs:maxInclusive value="9999"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="TelefonszamType">
+        <xs:restriction base="xs:string">
+            <xs:pattern value="(20|30|70)[0-9]{7}" />
+        </xs:restriction>
+    </xs:simpleType>
+    
+    <xs:simpleType name="DatumType">
+        <xs:restriction base="xs:string">
+            <xs:pattern value="([12]\d{3}-(0[1-9]|1[0-2])-(0[1-9]|[12]\d|3[01]))" />
+        </xs:restriction>
+    </xs:simpleType>
+    
+    <xs:complexType name="LakcimType">
+        <xs:sequence>
+            <xs:element name="Irányítószám" type="IRSZType"/>
+            <xs:element name="Város" type="xs:string"/>
+            <xs:element name="Utca" type="xs:string"/>
+            <xs:element name="Házszám" type="xs:positiveInteger"/>
+        </xs:sequence>
+    </xs:complexType>
+    
+    <xs:complexType name="NevType">
+        <xs:sequence>
+            <xs:element name="Vezetéknév" type="xs:string"/>
+            <xs:element name="Keresztnév" type="xs:string"/>
+        </xs:sequence>
+    </xs:complexType>
+</xs:schema>

@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><Webshop xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="XMLSchemaHx35eu.xsd">
+    <Vevő VEVO_ID="0">
+        <TeljesNév>
+            <Vezetéknév>Szabó</Vezetéknév>
+            <Keresztnév>Péter</Keresztnév>
+        </TeljesNév>
+        <Telefonszám>301234657</Telefonszám>
+        <Lakcím>
+            <Irányítószám>3524</Irányítószám>
+            <Város>Miskolc</Város>
+            <Utca>Stadion</Utca>
+            <Házszám>12</Házszám>
+        </Lakcím>
+    </Vevő>
+    <Vevő VEVO_ID="1">
+        <TeljesNév>
+            <Vezetéknév>Kiss</Vezetéknév>
+            <Keresztnév>Béla Aurélió</Keresztnév>
+        </TeljesNév>
+        <Telefonszám>701234567</Telefonszám>
+        <Lakcím>
+            <Irányítószám>1015</Irányítószám>
+            <Város>Budapest</Város>
+            <Utca>Fahéj</Utca>
+            <Házszám>22</Házszám>
+        </Lakcím>
+    </Vevő>
+	<Vevő VEVO_ID="2">
+        <TeljesNév>
+            <Vezetéknév>Nincs</Vezetéknév>
+            <Keresztnév>Ko Sara</Keresztnév>
+        </TeljesNév>
+        <Telefonszám>201234567</Telefonszám>
+        <Lakcím>
+            <Irányítószám>1015</Irányítószám>
+            <Város>Budapest</Város>
+            <Utca>Perec</Utca>
+            <Házszám>10</Házszám>
+        </Lakcím>
+    </Vevő>
+    <Kosár KOSAR_ID="0" VEVO_ID="0"/>
+    <Kosár KOSAR_ID="1" VEVO_ID="1"/>
+    <Termék TERMEK_ID="0" TIPUS_ID="0">
+        <Készlet>12</Készlet>
+        <Megnevezés>LG OLED88ZX9LA</Megnevezés>
+		<Ár>110220</Ár>
+    </Termék>
+    <Termék TERMEK_ID="1" TIPUS_ID="0">
+        <Készlet>5</Készlet>
+        <Megnevezés>Samsung QE82Q950RB</Megnevezés>
+		<Ár>142780</Ár>
+    </Termék>
+    <Termék TERMEK_ID="2" TIPUS_ID="2">
+        <Készlet>120</Készlet>
+        <Megnevezés>Apple iPhone 12 Pro Max</Megnevezés>
+		<Ár>259160</Ár>
+    </Termék>
+    <Termék TERMEK_ID="3" TIPUS_ID="1">
+        <Készlet>12000</Készlet>
+        <Megnevezés>Apple MacBook Pro 16</Megnevezés>
+		<Ár>409420</Ár>
+    </Termék>
+    <Termék TERMEK_ID="4" TIPUS_ID="1">
+        <Készlet>10</Készlet>
+        <Megnevezés>Apple MacBook Pro 13</Megnevezés>
+		<Ár>551100</Ár>
+    </Termék>
+    <Típus TIPUS_ID="0">
+        <Típusnév>Televízió</Típusnév>
+    </Típus>
+    <Típus TIPUS_ID="1">
+        <Típusnév>Laptop</Típusnév>
+    </Típus>
+    <Típus TIPUS_ID="2">
+        <Típusnév>Mobiltelefon</Típusnév>
+    </Típus>
+    <Típus TIPUS_ID="3">
+        <Típusnév>Tablet</Típusnév>
+    </Típus>
+    <Benne KOSAR_ID="0" TERMEK_ID="1">
+        <Darab>2</Darab>
+        <Dátum>2020-11-20</Dátum>
+    </Benne>
+    <Benne KOSAR_ID="0" TERMEK_ID="4">
+        <Darab>1</Darab>
+        <Dátum>2020-11-20</Dátum>
+    </Benne>
+    <Benne KOSAR_ID="0" TERMEK_ID="3">
+        <Darab>10</Darab>
+        <Dátum>2020-11-20</Dátum>
+    </Benne>
+</Webshop>
