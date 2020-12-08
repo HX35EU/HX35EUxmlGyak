@@ -1,0 +1,42 @@
+[
+   {
+      "@rsz": "abc-100",
+      "tipus": "flat",
+      "ar": "21233",
+      "szin": "piros",
+      "tulaj": {
+         "nev": "zoli",
+         "varos": "eger"
+      }
+   },
+   {
+      "@rsz": "abc-101",
+      "tipus": "skoda",
+      "ar": "44233",
+      "szin": "feher",
+      "tulaj": {
+         "nev": "peti",
+         "varos": "miskolc"
+      }
+   },
+   {
+      "@rsz": "abc-102",
+      "tipus": "opel",
+      "ar": "31233",
+      "szin": "szurke",
+      "tulaj": {
+         "nev": "tomi",
+         "varos": "miskolc"
+      }
+   },
+   {
+      "@rsz": "abc-100",
+      "tipus": "opel",
+      "ar": "21233",
+      "szin": "kek",
+      "tulaj": {
+         "nev": "sanyi",
+         "varos": "miskolc"
+      }
+   }
+]
